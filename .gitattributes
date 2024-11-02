@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+git lfs track "*.pdf"
+git lfs track "*.mp4"
+git lfs track "*.rar"
