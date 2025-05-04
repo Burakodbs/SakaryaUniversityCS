@@ -1,0 +1,101 @@
+asd#			show run
+asd#			show version
+asd#			configure terminal
+asd#			?
+asd(config)#		interface atm 1/0
+asd(config-if)#		no shutdown
+asd(config-if)#		exit
+asd(config)#		interface atm 1/0.35 point-to-point
+asd(config-subif)#	ip adress 193.140.253.2 255.255.255.0
+asd(config-subif)#	pvc 8/35
+asd(config-if-atm-vc)#	protocol ip 193.140.253.1 broadcast
+asd(config-if-atm-vc)#	encapsulation aal5snap
+asd(config-if-atm-vc)#	exit
+asd(config-subif)#	exit
+asd(config)#		exit
+asd#			write
+
+asd(config)#		interface fastEthernet 0/0
+asd(config-subif)#	ip adress 10.10.10.161 255.255.255.224
+asd(config-subif)#	exit
+asd(config)#		exit
+asd#			write
+
+
+asd(config)#		router ospf 1
+asd(config-router)#	network 192.168.1.0 0.0.0.255 area 1
+asd(config-router)#	network 193.140.253.0 0.0.0.255 area 1
+asd(config-router)#	exit
+asd(config)#		exit
+asd#			write
+
+
+-----------------------------------------
+
+asd>			enable
+asd#			show vlan
+asd#			config terminal
+asd(config)#		vlan 10
+asd(config-vlan)#	name akademik
+asd(config-vlan)#	exit
+asd(config)#		interface fastEthernet 0/1
+asd(config-if)#		switchport mode access
+asd(config-if)#		switchport access vlan 10
+asd(config-if)#		exit
+asd(config)#		switchport range fastEthernet 0/3-4
+asd(config-if-range)#	switchport mode access
+asd(config-if-range)#	switchport access vlan 10
+asd(config-if-range)#	exit
+asd(config)#		interface fastEthernet 10
+asd(config-if)#		switchport mode trunk
+asd(config-if)#		switchport trunk native vlan 1
+asd(config-if)#		switchport trun allowed vlan 1,10,20,30
+asd(config-if)#		exit
+asd(config)#		exit
+asd#			write
+
+router>			enable
+router#			config terminal
+router(config)#		interface fastEtherenet 0/0
+router(config-if)#	no ip adress
+router(config-if)#	no shutdown
+router(config-if)#	exit
+router(config)#		interface fastEtherenet 0/0.10
+router(config-subif)#	encapsulation dot1q 10
+router(config-subif)#	ip adress 192.168.1.1 255.255.255.0
+router(config-if)#	exit
+router(config)#	
+
+router>			enable
+router#			config terminal
+router(config)#		hostname ist
+ist(config)#		interface fastEtherenet 0/0
+ist(config-if)#		no shutdown
+ist(config-if)#		ip adress 192.168.1.1 255.255.255.0
+ist(config-if)#		exit
+ist(config)#		interface Serial 0/1/0
+ist(config-if)#		no shutdown
+ist(config-if)#		clock rate 125000
+ist(config-if)#		ip adress 193.10.20.1 255.255.255.0
+ist(config-if)#		exit
+ist(config)#		router rip
+ist(config-router)#	network 192.168.2.0
+ist(config-router)#	network 193.10.20.0
+ist(config-router)#	exit
+ist(config)#		access-list 1 deny 192.168.2.2
+ist(config)#		access-list 1 permit any
+ist(config)#		interface Serial 0/1/0
+ist(config-if)#		ip access-group 1 in
+ist(config-if)#		exit
+ist(config)#		access-list 111 deny tcp 192.168.2.5 0.0.0.0 192.168.1.12 0.0.0.0 eq www
+ist(config)#		access-list 111 permit ip any any
+ist(config)#		interface Serial 0/1/0
+ist(config-if)#		ip access-group 111 out
+ist(config-if)#		exit
+ist(config)#		exit
+ist#			write
+
+switch on - router off
+standart erişim denetim listesi => yön, 0-99, hedefe en yakın
+genişletilmiş erişim denetim listesi => port ve protokol, 100-199, kaynağa en yakn 
+DCE -> Clock rate
