@@ -1,0 +1,3082 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://esinav.sabis.sakarya.edu.tr/Session/Exam/Start -->
+<html lang="tr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="">-->
+    <base href=".">
+
+    <title>SABİS | Sakarya Üniversitesi Bilgi Sistemi</title>
+
+    <meta name="description" content="Çevrimiçi Sınav Sistemi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--begin::Fonts -->
+    <link rel="stylesheet" href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/css">
+
+    <!--end::Fonts -->
+    <!--begin::Page Vendors Styles(used by this page) -->
+
+
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/wizard-3.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .cevap {
+            vertical-align: top;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 10px;
+        }
+
+        .cevap-yazi {
+            padding: 2px;
+        }
+
+        .grade {}
+
+        .question-number {
+            border: solid 2px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .answer-text {
+            white-space: pre-wrap;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .unsaved {
+            border-color: #f64e60 !important;
+        }
+
+        .jdflkgjlk {
+            /*            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;*/
+        }
+
+        .radio span {
+            flex-shrink: 0;
+        }
+
+        .wizard.wizard-3 .wizard-nav .wizard-steps {
+            -ms-flex-direction: row !important;
+            flex-direction: row !important;
+        }
+
+        .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step {
+            flex-basis: 0 !important;
+        }
+
+        .answered {
+            color: limegreen !important;
+        }
+
+        .answered::after {
+            background-color: limegreen !important;
+        }
+
+        .unanswered {
+            color: orangered !important;
+        }
+
+        .unanswered::after {
+            background-color: orangered !important;
+        }
+
+        .TaphxqjG {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='110px' width='160px'><text transform='translate(10, 90) rotate(-30)' fill='rgb(224,224,224)' fill-opacity='0.6' font-size='14' style='border:solid 1px black; font-family:Poppins, Helvetica'></text></svg>") !important;
+        }
+    </style>
+
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/fullcalendar.bundle.css" rel="stylesheet"
+        type="text/css">
+
+    <!--end::Page Vendors Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/prismjs.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/style.bundle.css" rel="stylesheet" type="text/css">
+
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/dark.css" rel="stylesheet" type="text/css">
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/light.css" rel="stylesheet" type="text/css">
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/dark(1).css" rel="stylesheet" type="text/css">
+    <link href="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/light(1).css" rel="stylesheet" type="text/css">
+
+    <!--end::Layout Skins -->
+    <link rel="shortcut icon" href="https://cdn0.sabis.sakarya.edu.tr/saulogo/favicon.ico">
+
+    <style type="text/css">
+        #img-preview {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            min-height: 100vh;
+            width: 100%;
+            z-index: 1999;
+            background: #0000006b;
+            padding: 100px 10% 0 10%;
+            text-align: center;
+            display: none;
+            bottom: 0;
+        }
+
+        #img-preview-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 32px;
+            color: white;
+            background-color: transparent;
+        }
+
+        #img-preview-info {
+            position: absolute;
+            bottom: 30px;
+            color: #ffffff6e;
+            left: 45%;
+        }
+
+        .toast-error {
+            background-color: #bd362f !important;
+        }
+    </style>
+
+    <style type="text/css">
+        .apexcharts-canvas {
+            position: relative;
+            user-select: none;
+            /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+        }
+
+
+        /* scrollbar is not visible by default for legend, hence forcing the visibility */
+        .apexcharts-canvas ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 6px;
+        }
+
+        .apexcharts-canvas ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, .5);
+            box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+            -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+        }
+
+
+        .apexcharts-inner {
+            position: relative;
+        }
+
+        .apexcharts-text tspan {
+            font-family: inherit;
+        }
+
+        .legend-mouseover-inactive {
+            transition: 0.15s ease all;
+            opacity: 0.20;
+        }
+
+        .apexcharts-series-collapsed {
+            opacity: 0;
+        }
+
+        .apexcharts-tooltip {
+            border-radius: 5px;
+            box-shadow: 2px 2px 6px -4px #999;
+            cursor: default;
+            font-size: 14px;
+            left: 62px;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 12;
+            transition: 0.15s ease all;
+        }
+
+        .apexcharts-tooltip.apexcharts-active {
+            opacity: 1;
+            transition: 0.15s ease all;
+        }
+
+        .apexcharts-tooltip.apexcharts-theme-light {
+            border: 1px solid #e3e3e3;
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        .apexcharts-tooltip.apexcharts-theme-dark {
+            color: #fff;
+            background: rgba(30, 30, 30, 0.8);
+        }
+
+        .apexcharts-tooltip * {
+            font-family: inherit;
+        }
+
+
+        .apexcharts-tooltip-title {
+            padding: 6px;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+            background: #ECEFF1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid #333;
+        }
+
+        .apexcharts-tooltip-text-value,
+        .apexcharts-tooltip-text-z-value {
+            display: inline-block;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .apexcharts-tooltip-text-z-label:empty,
+        .apexcharts-tooltip-text-z-value:empty {
+            display: none;
+        }
+
+        .apexcharts-tooltip-text-value,
+        .apexcharts-tooltip-text-z-value {
+            font-weight: 600;
+        }
+
+        .apexcharts-tooltip-marker {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            top: 0px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .apexcharts-tooltip-series-group {
+            padding: 0 10px;
+            display: none;
+            text-align: left;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+            opacity: 1;
+        }
+
+        .apexcharts-tooltip-series-group.apexcharts-active,
+        .apexcharts-tooltip-series-group:last-child {
+            padding-bottom: 4px;
+        }
+
+        .apexcharts-tooltip-series-group-hidden {
+            opacity: 0;
+            height: 0;
+            line-height: 0;
+            padding: 0 !important;
+        }
+
+        .apexcharts-tooltip-y-group {
+            padding: 6px 0 5px;
+        }
+
+        .apexcharts-tooltip-candlestick {
+            padding: 4px 8px;
+        }
+
+        .apexcharts-tooltip-candlestick>div {
+            margin: 4px 0;
+        }
+
+        .apexcharts-tooltip-candlestick span.value {
+            font-weight: bold;
+        }
+
+        .apexcharts-tooltip-rangebar {
+            padding: 5px 8px;
+        }
+
+        .apexcharts-tooltip-rangebar .category {
+            font-weight: 600;
+            color: #777;
+        }
+
+        .apexcharts-tooltip-rangebar .series-name {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .apexcharts-xaxistooltip {
+            opacity: 0;
+            padding: 9px 10px;
+            pointer-events: none;
+            color: #373d3f;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 10;
+            background: #ECEFF1;
+            border: 1px solid #90A4AE;
+            transition: 0.15s ease all;
+        }
+
+        .apexcharts-xaxistooltip.apexcharts-theme-dark {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .apexcharts-xaxistooltip:after,
+        .apexcharts-xaxistooltip:before {
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .apexcharts-xaxistooltip:after {
+            border-color: rgba(236, 239, 241, 0);
+            border-width: 6px;
+            margin-left: -6px;
+        }
+
+        .apexcharts-xaxistooltip:before {
+            border-color: rgba(144, 164, 174, 0);
+            border-width: 7px;
+            margin-left: -7px;
+        }
+
+        .apexcharts-xaxistooltip-bottom:after,
+        .apexcharts-xaxistooltip-bottom:before {
+            bottom: 100%;
+        }
+
+        .apexcharts-xaxistooltip-top:after,
+        .apexcharts-xaxistooltip-top:before {
+            top: 100%;
+        }
+
+        .apexcharts-xaxistooltip-bottom:after {
+            border-bottom-color: #ECEFF1;
+        }
+
+        .apexcharts-xaxistooltip-bottom:before {
+            border-bottom-color: #90A4AE;
+        }
+
+        .apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+            border-bottom-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+            border-bottom-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-xaxistooltip-top:after {
+            border-top-color: #ECEFF1
+        }
+
+        .apexcharts-xaxistooltip-top:before {
+            border-top-color: #90A4AE;
+        }
+
+        .apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+            border-top-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+            border-top-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-xaxistooltip.apexcharts-active {
+            opacity: 1;
+            transition: 0.15s ease all;
+        }
+
+        .apexcharts-yaxistooltip {
+            opacity: 0;
+            padding: 4px 10px;
+            pointer-events: none;
+            color: #373d3f;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 10;
+            background: #ECEFF1;
+            border: 1px solid #90A4AE;
+        }
+
+        .apexcharts-yaxistooltip.apexcharts-theme-dark {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .apexcharts-yaxistooltip:after,
+        .apexcharts-yaxistooltip:before {
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .apexcharts-yaxistooltip:after {
+            border-color: rgba(236, 239, 241, 0);
+            border-width: 6px;
+            margin-top: -6px;
+        }
+
+        .apexcharts-yaxistooltip:before {
+            border-color: rgba(144, 164, 174, 0);
+            border-width: 7px;
+            margin-top: -7px;
+        }
+
+        .apexcharts-yaxistooltip-left:after,
+        .apexcharts-yaxistooltip-left:before {
+            left: 100%;
+        }
+
+        .apexcharts-yaxistooltip-right:after,
+        .apexcharts-yaxistooltip-right:before {
+            right: 100%;
+        }
+
+        .apexcharts-yaxistooltip-left:after {
+            border-left-color: #ECEFF1;
+        }
+
+        .apexcharts-yaxistooltip-left:before {
+            border-left-color: #90A4AE;
+        }
+
+        .apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+            border-left-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+            border-left-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-yaxistooltip-right:after {
+            border-right-color: #ECEFF1;
+        }
+
+        .apexcharts-yaxistooltip-right:before {
+            border-right-color: #90A4AE;
+        }
+
+        .apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+            border-right-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+            border-right-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .apexcharts-yaxistooltip.apexcharts-active {
+            opacity: 1;
+        }
+
+        .apexcharts-yaxistooltip-hidden {
+            display: none;
+        }
+
+        .apexcharts-xcrosshairs,
+        .apexcharts-ycrosshairs {
+            pointer-events: none;
+            opacity: 0;
+            transition: 0.15s ease all;
+        }
+
+        .apexcharts-xcrosshairs.apexcharts-active,
+        .apexcharts-ycrosshairs.apexcharts-active {
+            opacity: 1;
+            transition: 0.15s ease all;
+        }
+
+        .apexcharts-ycrosshairs-hidden {
+            opacity: 0;
+        }
+
+        .apexcharts-selection-rect {
+            cursor: move;
+        }
+
+        .svg_select_boundingRect,
+        .svg_select_points_rot {
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .apexcharts-selection-rect+g .svg_select_boundingRect,
+        .apexcharts-selection-rect+g .svg_select_points_rot {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .apexcharts-selection-rect+g .svg_select_points_l,
+        .apexcharts-selection-rect+g .svg_select_points_r {
+            cursor: ew-resize;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .svg_select_points {
+            fill: #efefef;
+            stroke: #333;
+            rx: 2;
+        }
+
+        .apexcharts-canvas.apexcharts-zoomable .hovering-zoom {
+            cursor: crosshair
+        }
+
+        .apexcharts-canvas.apexcharts-zoomable .hovering-pan {
+            cursor: move
+        }
+
+        .apexcharts-zoom-icon,
+        .apexcharts-zoomin-icon,
+        .apexcharts-zoomout-icon,
+        .apexcharts-reset-icon,
+        .apexcharts-pan-icon,
+        .apexcharts-selection-icon,
+        .apexcharts-menu-icon,
+        .apexcharts-toolbar-custom-icon {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            line-height: 24px;
+            color: #6E8192;
+            text-align: center;
+        }
+
+        .apexcharts-zoom-icon svg,
+        .apexcharts-zoomin-icon svg,
+        .apexcharts-zoomout-icon svg,
+        .apexcharts-reset-icon svg,
+        .apexcharts-menu-icon svg {
+            fill: #6E8192;
+        }
+
+        .apexcharts-selection-icon svg {
+            fill: #444;
+            transform: scale(0.76)
+        }
+
+        .apexcharts-theme-dark .apexcharts-zoom-icon svg,
+        .apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+        .apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+        .apexcharts-theme-dark .apexcharts-reset-icon svg,
+        .apexcharts-theme-dark .apexcharts-pan-icon svg,
+        .apexcharts-theme-dark .apexcharts-selection-icon svg,
+        .apexcharts-theme-dark .apexcharts-menu-icon svg,
+        .apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+            fill: #f3f4f5;
+        }
+
+        .apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+        .apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+        .apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+            fill: #008FFB;
+        }
+
+        .apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+        .apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+        .apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+        .apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+        .apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+        .apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+            fill: #333;
+        }
+
+        .apexcharts-selection-icon,
+        .apexcharts-menu-icon {
+            position: relative;
+        }
+
+        .apexcharts-reset-icon {
+            margin-left: 5px;
+        }
+
+        .apexcharts-zoom-icon,
+        .apexcharts-reset-icon,
+        .apexcharts-menu-icon {
+            transform: scale(0.85);
+        }
+
+        .apexcharts-zoomin-icon,
+        .apexcharts-zoomout-icon {
+            transform: scale(0.7)
+        }
+
+        .apexcharts-zoomout-icon {
+            margin-right: 3px;
+        }
+
+        .apexcharts-pan-icon {
+            transform: scale(0.62);
+            position: relative;
+            left: 1px;
+            top: 0px;
+        }
+
+        .apexcharts-pan-icon svg {
+            fill: #fff;
+            stroke: #6E8192;
+            stroke-width: 2;
+        }
+
+        .apexcharts-pan-icon.apexcharts-selected svg {
+            stroke: #008FFB;
+        }
+
+        .apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+            stroke: #333;
+        }
+
+        .apexcharts-toolbar {
+            position: absolute;
+            z-index: 11;
+            max-width: 176px;
+            text-align: right;
+            border-radius: 3px;
+            padding: 0px 6px 2px 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .apexcharts-menu {
+            background: #fff;
+            position: absolute;
+            top: 100%;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 3px;
+            right: 10px;
+            opacity: 0;
+            min-width: 110px;
+            transition: 0.15s ease all;
+            pointer-events: none;
+        }
+
+        .apexcharts-menu.apexcharts-menu-open {
+            opacity: 1;
+            pointer-events: all;
+            transition: 0.15s ease all;
+        }
+
+        .apexcharts-menu-item {
+            padding: 6px 7px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .apexcharts-theme-light .apexcharts-menu-item:hover {
+            background: #eee;
+        }
+
+        .apexcharts-theme-dark .apexcharts-menu {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+
+        @media screen and (min-width: 768px) {
+            .apexcharts-canvas:hover .apexcharts-toolbar {
+                opacity: 1;
+            }
+        }
+
+        .apexcharts-datalabel.apexcharts-element-hidden {
+            opacity: 0;
+        }
+
+        .apexcharts-pie-label,
+        .apexcharts-datalabels,
+        .apexcharts-datalabel,
+        .apexcharts-datalabel-label,
+        .apexcharts-datalabel-value {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .apexcharts-pie-label-delay {
+            opacity: 0;
+            animation-name: opaque;
+            animation-duration: 0.3s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .apexcharts-canvas .apexcharts-element-hidden {
+            opacity: 0;
+        }
+
+        .apexcharts-hide .apexcharts-series-points {
+            opacity: 0;
+        }
+
+        .apexcharts-gridline,
+        .apexcharts-annotation-rect,
+        .apexcharts-tooltip .apexcharts-marker,
+        .apexcharts-area-series .apexcharts-area,
+        .apexcharts-line,
+        .apexcharts-zoom-rect,
+        .apexcharts-toolbar svg,
+        .apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+        .apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+        .apexcharts-radar-series path,
+        .apexcharts-radar-series polygon {
+            pointer-events: none;
+        }
+
+
+        /* markers */
+
+        .apexcharts-marker {
+            transition: 0.15s ease all;
+        }
+
+        @keyframes opaque {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        /* Resize generated styles */
+
+        @keyframes resizeanim {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .resize-triggers {
+            animation: 1ms resizeanim;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .resize-triggers,
+        .resize-triggers>div,
+        .contract-trigger:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .resize-triggers>div {
+            background: #eee;
+            overflow: auto;
+        }
+
+        .contract-trigger:before {
+            width: 200%;
+            height: 200%;
+        }
+    </style>
+</head>
+
+<body id="kt_body" class="header-fixed header-mobile-fixed vsc-initialized" style="">
+    <!--begin::Main-->
+    <!--begin::Header Mobile-->
+    <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed ">
+
+        <!--begin::Logo-->
+        <a href="https://esinav.sabis.sakarya.edu.tr/">
+            <img alt="Logo" src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/logo-sabis-sau.png">
+        </a>
+
+        <!--end::Logo-->
+        <!--begin::Toolbar-->
+        <div class="d-flex align-items-center">
+
+            <!--begin::Aside Mobile Toggle-->
+            <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+                <span></span>
+            </button>
+
+            <!--end::Aside Mobile Toggle-->
+            <!--begin::Header Menu Mobile Toggle-->
+            <button class="btn p-0 burger-icon ml-4 d-none d-md-none d-lg-block" id="kt_header_mobile_toggle">
+                <span></span>
+            </button>
+
+            <!--end::Header Menu Mobile Toggle-->
+            <!--begin::Topbar Mobile Toggle-->
+            <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+                <span class="svg-icon svg-icon-xl">
+
+                    <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg--><svg
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                            <path
+                                d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z"
+                                fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                            <path
+                                d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z"
+                                fill="#000000" fill-rule="nonzero"></path>
+                        </g>
+                    </svg>
+
+                    <!--end::Svg Icon-->
+                </span>
+            </button>
+
+            <!--end::Topbar Mobile Toggle-->
+        </div>
+
+        <!--end::Toolbar-->
+    </div>
+
+    <!--end::Header Mobile-->
+    <div class="d-flex flex-column flex-root">
+
+        <!--begin::Page-->
+        <div class="d-flex flex-row flex-column-fluid page">
+
+            <!--[html-partial:include:{"file":"partials/_aside.html"}]/-->
+
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+
+                <!--[html-partial:include:{"file":"partials/_header.html"}]/-->
+
+                <!--begin::Header-->
+                <div id="kt_header" class="header  header-fixed ">
+
+                    <!--begin::Container-->
+                    <div class=" container-fluid  d-flex align-items-stretch justify-content-between">
+
+                        <!--begin::Header Menu Wrapper-->
+                        <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                            <div class="header-logo">
+                                <a href="https://esinav.sabis.sakarya.edu.tr/">
+                                    <img alt="Logo"
+                                        src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/logo-sabis-sau.png">
+                                </a>
+                            </div>
+
+                            <!--begin::Header Menu-->
+                            <div id="kt_header_menu"
+                                class="header-menu header-menu-mobile  header-menu-layout-default ">
+
+                                <!--begin::Header Nav-->
+                                <ul class="menu-nav ">
+                                    <li class="menu-item  menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active"
+                                        data-menu-toggle="click" aria-haspopup="true">
+                                        <a href="javascript:;" class="menu-link menu-toggle"><span
+                                                class="menu-text">Çevrimiçi Sınav Sistemi</span><i
+                                                class="menu-arrow"></i></a>
+
+                                    </li>
+
+                                </ul>
+
+                                <!--end::Header Nav-->
+                            </div>
+
+                            <!--end::Header Menu-->
+                        </div>
+
+                        <!--end::Header Menu Wrapper-->
+                        <!--begin::Topbar-->
+                        <div class="topbar">
+
+                            <!--begin::Languages-->
+                            <div class="dropdown" style="display:none;">
+
+                                <!--begin::Toggle-->
+                                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                                    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
+                                        <img class="h-20px w-20px rounded-sm"
+                                            src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/226-united-states.svg"
+                                            alt="">
+                                    </div>
+                                </div>
+
+                                <!--end::Toggle-->
+                                <!--begin::Dropdown-->
+                                <div
+                                    class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
+
+                                    <!--[html-partial:include:{"file":"partials/_extras/dropdown/languages.html"}]/-->
+                                </div>
+
+                                <!--end::Dropdown-->
+                            </div>
+
+                            <!--end::Languages-->
+                            <!--begin::User-->
+                            <div class="dropdown">
+
+                                <!--begin::Toggle-->
+                                <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
+                                    <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
+                                        <span
+                                            class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">
+
+                                        </span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!--end::Toggle-->
+                                <!--begin::Dropdown-->
+                                <div
+                                    class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
+
+
+                                    <!--begin::Header-->
+                                    <!--end::Header-->
+                                    <!--begin::Nav-->
+                                    <div class="navi navi-spacer-x-0 pt-5">
+                                        <!--begin::Footer-->
+                                        <div class="navi-footer  px-8 py-5">
+
+                                            <a class="btn btn-light-primary font-weight-bold"
+                                                href="https://esinav.sabis.sakarya.edu.tr/Home/Logout">Çıkış Yap</a>
+                                        </div>
+
+                                        <!--end::Footer-->
+                                    </div>
+
+                                    <!--end::Nav-->
+                                </div>
+
+                                <!--end::Dropdown-->
+                            </div>
+
+                            <!--end::User-->
+                        </div>
+
+                        <!--end::Topbar-->
+                    </div>
+
+                    <!--end::Container-->
+                </div>
+
+                <!--end::Header-->
+                <!--begin::Content-->
+                <div class="content  d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--[html-partial:include:{"file":"partials/_content.html"}]/-->
+                    <div class="d-flex flex-column-fluid">
+
+
+
+                        <div class=" container-fluid " onselectstart="return false" onpaste="return false;"
+                            oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false">
+
+                            <div style="height: 100%; background-color: #4e4e4e; position: fixed; left: 0; top: 0; width: 100%; z-index: 1; text-align:center; color:white; padding-top:150px; display:none;"
+                                id="fullscreen-prompt">
+                                <button type="button" class="btn btn-success" onclick="goFullscreen();">Başla</button>
+                            </div>
+
+                            <div class="wizard wizard-3" id="kt_wizard_v3" data-wizard-state="between"
+                                data-wizard-clickable="true">
+
+                                <div class="wizard-nav bg-white TaphxqjG mb-5">
+                                    <div class="wizard-steps px-8 py-8 px-lg-15 py-lg-3 flex-wrap">
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="done">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>1.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="done">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>2.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="done">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>3.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="done">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>4.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="done">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>5.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="done">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>6.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="current">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>7.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="pending">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>8.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="pending">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>9.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-step w-50px" data-wizard-type="step"
+                                            data-wizard-state="pending">
+                                            <div class="wizard-label answered">
+                                                <h3 class="wizard-title">
+                                                    <span>10.</span> Soru
+                                                </h3>
+                                                <div class="wizard-bar answered"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center " id="scrollTarget">
+                                    <div class="col-xl-12">
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="d68aee49-59cb-4449-bb56-9b18eb809be9">Soru 1
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Bir işyerinde haftalık gürültü maruziyet sınır
+                                                                    değeri dB cinsinden (LEX, 8 saat) ne
+                                                                    olmalıdır?</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-d68aee49-59cb-4449-bb56-9b18eb809be9"
+                                                                            onchange="Save(&#39;4b4a5ec5-165b-4a10-a866-0001a2a7386e&#39;, &#39;d68aee49-59cb-4449-bb56-9b18eb809be9&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">87
+                                                                            dB</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-d68aee49-59cb-4449-bb56-9b18eb809be9"
+                                                                            onchange="Save(&#39;469a10e6-1305-4786-9561-961924b4bceb&#39;, &#39;d68aee49-59cb-4449-bb56-9b18eb809be9&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">90
+                                                                            dB</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-d68aee49-59cb-4449-bb56-9b18eb809be9"
+                                                                            onchange="Save(&#39;5e199a20-e5aa-4d01-bc4c-8674926c3cff&#39;, &#39;d68aee49-59cb-4449-bb56-9b18eb809be9&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">85
+                                                                            dB</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-d68aee49-59cb-4449-bb56-9b18eb809be9"
+                                                                            onchange="Save(&#39;607d1cce-8e45-4bc0-b25a-f80ef3fd9cb1&#39;, &#39;d68aee49-59cb-4449-bb56-9b18eb809be9&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">97
+                                                                            dB</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-d68aee49-59cb-4449-bb56-9b18eb809be9"
+                                                                            onchange="Save(&#39;ff940f82-dca9-4bd9-9eec-3d592fbb8258&#39;, &#39;d68aee49-59cb-4449-bb56-9b18eb809be9&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">80
+                                                                            dB</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;d68aee49-59cb-4449-bb56-9b18eb809be9&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="0daf6793-ba91-40bf-ae29-b5cae84c12b8">Soru 2
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Aşağıdakilerden hangisi yanlıştır ?</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-0daf6793-ba91-40bf-ae29-b5cae84c12b8"
+                                                                            onchange="Save(&#39;1813f5f2-c84f-46ee-9fa5-e2df1e36648d&#39;, &#39;0daf6793-ba91-40bf-ae29-b5cae84c12b8&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Bakım ve
+                                                                            onarım işlemlerinde kazalar en çok işin
+                                                                            bitiminde meydana gelmektedir</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-0daf6793-ba91-40bf-ae29-b5cae84c12b8"
+                                                                            onchange="Save(&#39;a970a4cf-39c3-453d-9ccc-c204819823b2&#39;, &#39;0daf6793-ba91-40bf-ae29-b5cae84c12b8&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Tesiste
+                                                                            çalışan operatörlerin işi sadece üretim
+                                                                            yapmaktır</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-0daf6793-ba91-40bf-ae29-b5cae84c12b8"
+                                                                            onchange="Save(&#39;ed56352b-f859-4251-ae42-607cee1b19cd&#39;, &#39;0daf6793-ba91-40bf-ae29-b5cae84c12b8&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Bakım ve
+                                                                            onarım işlemleri planlı ve düzenli
+                                                                            çalışmalardır</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-0daf6793-ba91-40bf-ae29-b5cae84c12b8"
+                                                                            onchange="Save(&#39;7c0acdff-3d48-4d6b-a5de-12630f233a2d&#39;, &#39;0daf6793-ba91-40bf-ae29-b5cae84c12b8&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Bakım ve
+                                                                            onarım işlemlerinde kazalar en çok işe
+                                                                            başlamadan önce meydana
+                                                                            gelmektedir.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-0daf6793-ba91-40bf-ae29-b5cae84c12b8"
+                                                                            onchange="Save(&#39;3dd692d8-f41d-4717-9d41-d5102a3b4029&#39;, &#39;0daf6793-ba91-40bf-ae29-b5cae84c12b8&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Zamanında
+                                                                            yapılan bakım onarım çalışmaları kaza ve
+                                                                            üretim kayıplarını azaltır.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;0daf6793-ba91-40bf-ae29-b5cae84c12b8&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="5fa8b1bc-352a-40ec-bde9-3549a0b3b93b">Soru 3
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Toz, genellikle tanecik büyüklüğü 300 mikronun
+                                                                    altındaki katı taneciklerdir ve daima hava veya
+                                                                    başka bir gaz içinde karışım halinde bulunur. Tozlar
+                                                                    için verilen bilgilerden hangisi yanlıştır?</strong>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-5fa8b1bc-352a-40ec-bde9-3549a0b3b93b"
+                                                                            onchange="Save(&#39;2b8443f3-4d18-4794-8695-9906c8bf1c32&#39;, &#39;5fa8b1bc-352a-40ec-bde9-3549a0b3b93b&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Kömür,
+                                                                            tahta, ağaç, tahıl, mineraller, metaller,
+                                                                            cevherler, maden ocaklarındaki her türlü
+                                                                            işlem ve bunlara benzer pek çok iş ve iş
+                                                                            kolunda oluşan tozlar periyodik olarak
+                                                                            kontrol ettirilmelidir.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-5fa8b1bc-352a-40ec-bde9-3549a0b3b93b"
+                                                                            onchange="Save(&#39;be61a6f8-8abc-400d-85c9-e72ae038a435&#39;, &#39;5fa8b1bc-352a-40ec-bde9-3549a0b3b93b&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Solunum
+                                                                            yoluyla akciğerlerdeki alveollere kadar
+                                                                            ulaşan ve orada birikerek pnömokonyoz
+                                                                            denilen toz hastalığı grubuna sebep olan
+                                                                            tozların büyüklükleri 25-50 mikron
+                                                                            arasındadır.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-5fa8b1bc-352a-40ec-bde9-3549a0b3b93b"
+                                                                            onchange="Save(&#39;1f2b20c9-40c5-4ad4-8dc5-4815648dcf4e&#39;, &#39;5fa8b1bc-352a-40ec-bde9-3549a0b3b93b&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Görüş
+                                                                            sahasını azaltır çalışanları rahatsız
+                                                                            eder.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-5fa8b1bc-352a-40ec-bde9-3549a0b3b93b"
+                                                                            onchange="Save(&#39;79cae229-ed82-4db0-9790-e50bd0677163&#39;, &#39;5fa8b1bc-352a-40ec-bde9-3549a0b3b93b&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Meslek
+                                                                            hastalıklarına sebep olur. (pnömokonyoz
+                                                                            gibi)</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-5fa8b1bc-352a-40ec-bde9-3549a0b3b93b"
+                                                                            onchange="Save(&#39;cfb17b20-1931-43cf-8f5f-e87a14de3e2c&#39;, &#39;5fa8b1bc-352a-40ec-bde9-3549a0b3b93b&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">İş
+                                                                            randımanını düşürür.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;5fa8b1bc-352a-40ec-bde9-3549a0b3b93b&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="dd21e5ed-4b07-4863-b6bf-787ed7280dae">Soru 4
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Yük ve insan taşıyan asansörlerin periyodik
+                                                                    muayeneleri standartlarda aksi belirtilmedikçe ne
+                                                                    kadar süre ile muayene edilmelidir?</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-dd21e5ed-4b07-4863-b6bf-787ed7280dae"
+                                                                            onchange="Save(&#39;815b2751-3260-47cb-bf8c-3273ab3ad680&#39;, &#39;dd21e5ed-4b07-4863-b6bf-787ed7280dae&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">2
+                                                                            Yıl</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-dd21e5ed-4b07-4863-b6bf-787ed7280dae"
+                                                                            onchange="Save(&#39;f51eacea-8987-4bac-8100-a15e513337f7&#39;, &#39;dd21e5ed-4b07-4863-b6bf-787ed7280dae&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">6
+                                                                            Ay</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-dd21e5ed-4b07-4863-b6bf-787ed7280dae"
+                                                                            onchange="Save(&#39;dc36cec9-b8d2-4489-a7b0-572dc7f65164&#39;, &#39;dd21e5ed-4b07-4863-b6bf-787ed7280dae&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">1
+                                                                            Yıl</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-dd21e5ed-4b07-4863-b6bf-787ed7280dae"
+                                                                            onchange="Save(&#39;9d4185d4-ed58-4daa-bc32-db400a46180c&#39;, &#39;dd21e5ed-4b07-4863-b6bf-787ed7280dae&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">3
+                                                                            Ay</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-dd21e5ed-4b07-4863-b6bf-787ed7280dae"
+                                                                            onchange="Save(&#39;83680abc-ac94-4365-a760-9d096bfbf8be&#39;, &#39;dd21e5ed-4b07-4863-b6bf-787ed7280dae&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">2
+                                                                            Yıl</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;dd21e5ed-4b07-4863-b6bf-787ed7280dae&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="60aaad8c-6d42-402a-94dc-7cd68686a43d">Soru 5
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>İş Kazaları istatistiklerine göre en çok
+                                                                    yaralanma çalışanın hangi uzuvunda
+                                                                    gerçekleşmektedir?</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-60aaad8c-6d42-402a-94dc-7cd68686a43d"
+                                                                            onchange="Save(&#39;97b1c29a-67a0-47e9-9547-05c95a0c76c0&#39;, &#39;60aaad8c-6d42-402a-94dc-7cd68686a43d&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">Bacaklar</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-60aaad8c-6d42-402a-94dc-7cd68686a43d"
+                                                                            onchange="Save(&#39;945669ba-5c48-4080-920f-0b937d0a1366&#39;, &#39;60aaad8c-6d42-402a-94dc-7cd68686a43d&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">Eller</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-60aaad8c-6d42-402a-94dc-7cd68686a43d"
+                                                                            onchange="Save(&#39;19fcbdaf-5d7e-4665-b767-c00f0942abeb&#39;, &#39;60aaad8c-6d42-402a-94dc-7cd68686a43d&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Kafa/Baş
+                                                                            Bölgesi</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-60aaad8c-6d42-402a-94dc-7cd68686a43d"
+                                                                            onchange="Save(&#39;16c0391e-7b30-473e-8d84-581964ad86e8&#39;, &#39;60aaad8c-6d42-402a-94dc-7cd68686a43d&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">Gözler</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-60aaad8c-6d42-402a-94dc-7cd68686a43d"
+                                                                            onchange="Save(&#39;e0c4603c-152a-41e7-b5d1-ec889e56c6f4&#39;, &#39;60aaad8c-6d42-402a-94dc-7cd68686a43d&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">Ayaklar</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;60aaad8c-6d42-402a-94dc-7cd68686a43d&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="452a15b1-8a8c-4642-b227-9d39e9fbe622">Soru 6
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Aşağıda verilen kişisel koruyucu donanımların
+                                                                    hangisi Kişisel Koruyucu Donanım Yönetmeliği
+                                                                    kapsamında değildir?</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-452a15b1-8a8c-4642-b227-9d39e9fbe622"
+                                                                            onchange="Save(&#39;2ffe40bd-9cf6-4ec7-82ca-91a339442699&#39;, &#39;452a15b1-8a8c-4642-b227-9d39e9fbe622&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Yüz, göz
+                                                                            koruyucuları</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-452a15b1-8a8c-4642-b227-9d39e9fbe622"
+                                                                            onchange="Save(&#39;4e5bc90a-f9f4-422d-8437-cb25397e7486&#39;, &#39;452a15b1-8a8c-4642-b227-9d39e9fbe622&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">Hepsi</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-452a15b1-8a8c-4642-b227-9d39e9fbe622"
+                                                                            onchange="Save(&#39;abf6d77c-c295-440f-ae1e-2e70e510c3ef&#39;, &#39;452a15b1-8a8c-4642-b227-9d39e9fbe622&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Miğfer,
+                                                                            kalkan gibi koruyucular </strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-452a15b1-8a8c-4642-b227-9d39e9fbe622"
+                                                                            onchange="Save(&#39;e5efc5a5-1f0f-4c40-aa78-9b53134e123b&#39;, &#39;452a15b1-8a8c-4642-b227-9d39e9fbe622&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Solunum
+                                                                            yolları koruyucuları</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-452a15b1-8a8c-4642-b227-9d39e9fbe622"
+                                                                            onchange="Save(&#39;f45df89d-bc81-42ee-ae14-80219b20052b&#39;, &#39;452a15b1-8a8c-4642-b227-9d39e9fbe622&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Kulak
+                                                                            koruyucuları</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;452a15b1-8a8c-4642-b227-9d39e9fbe622&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content" data-wizard-state="current">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="10a8ccca-b823-46c2-8ca0-4bb17b9701d1">Soru 7
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Aşağıdakilerden hangisi KKD özelliklerinden
+                                                                    DEĞİLDİR.</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-10a8ccca-b823-46c2-8ca0-4bb17b9701d1"
+                                                                            onchange="Save(&#39;9fc8a19f-768b-478c-abe5-04e6f53e17f2&#39;, &#39;10a8ccca-b823-46c2-8ca0-4bb17b9701d1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Kişilerce
+                                                                            giyilmek veya taşınmak amacıyla tasarlanmış
+                                                                            herhangi bir cihaz, alet veya
+                                                                            malzeme</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-10a8ccca-b823-46c2-8ca0-4bb17b9701d1"
+                                                                            onchange="Save(&#39;9e752fc4-9126-4aa1-8daa-ed6aa8cce16b&#39;, &#39;10a8ccca-b823-46c2-8ca0-4bb17b9701d1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Kişinin
+                                                                            hareket kabiliyetini kısıtlamak</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-10a8ccca-b823-46c2-8ca0-4bb17b9701d1"
+                                                                            onchange="Save(&#39;21c98fd3-2c6d-43aa-9d86-3762cb36727d&#39;, &#39;10a8ccca-b823-46c2-8ca0-4bb17b9701d1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Bir veya
+                                                                            birden fazla sağlık ve güvenlik tehlikesine
+                                                                            karşı korunmak</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-10a8ccca-b823-46c2-8ca0-4bb17b9701d1"
+                                                                            onchange="Save(&#39;8701d55f-e393-4412-87bf-fefd39edb2a4&#39;, &#39;10a8ccca-b823-46c2-8ca0-4bb17b9701d1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Kişiyi
+                                                                            aynı anda bir veya daha fazla muhtemel
+                                                                            risklere karşı korumak</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-10a8ccca-b823-46c2-8ca0-4bb17b9701d1"
+                                                                            onchange="Save(&#39;aa55ab9a-2e69-40ff-8f20-0075a465c85a&#39;, &#39;10a8ccca-b823-46c2-8ca0-4bb17b9701d1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Belirli
+                                                                            bir faaliyetin yapılması için korunma amacı
+                                                                            olmaksızın, taşınan veya giyilen donanımla
+                                                                            birlikte kullanabilmek</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;10a8ccca-b823-46c2-8ca0-4bb17b9701d1&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="43d4b891-379c-4044-8fd0-b5506dd0b695">Soru 8
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div>
+                                                            <img src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/248bb81a-3c05-4fcf-8e60-53d3ddd49f31.png"
+                                                                alt="resim" class="preview-question-image mw-100">
+                                                        </div>
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Kaldırma ve taşıma ilşerinde kullanılan şekilde
+                                                                    verilen işaretin anlamı aşağıdakilerden
+                                                                    hangisidir.</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-43d4b891-379c-4044-8fd0-b5506dd0b695"
+                                                                            onchange="Save(&#39;9a29be49-d0b2-49f2-a15a-3627a59ee207&#39;, &#39;43d4b891-379c-4044-8fd0-b5506dd0b695&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">İNDİR</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-43d4b891-379c-4044-8fd0-b5506dd0b695"
+                                                                            onchange="Save(&#39;6e414063-e18d-49be-b296-5a19e6344933&#39;, &#39;43d4b891-379c-4044-8fd0-b5506dd0b695&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">DUR</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-43d4b891-379c-4044-8fd0-b5506dd0b695"
+                                                                            onchange="Save(&#39;e3ee7411-0a65-4d49-8e5b-5bc4e64d31e5&#39;, &#39;43d4b891-379c-4044-8fd0-b5506dd0b695&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">YUKARI</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-43d4b891-379c-4044-8fd0-b5506dd0b695"
+                                                                            onchange="Save(&#39;f3160846-77c9-4f4f-98ea-76a1d87774dd&#39;, &#39;43d4b891-379c-4044-8fd0-b5506dd0b695&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">KALDIR</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-43d4b891-379c-4044-8fd0-b5506dd0b695"
+                                                                            onchange="Save(&#39;7294c08c-0bca-42d1-b788-89bf367db416&#39;, &#39;43d4b891-379c-4044-8fd0-b5506dd0b695&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">AŞAĞI</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;43d4b891-379c-4044-8fd0-b5506dd0b695&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1">Soru 9
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>İşyerinde planlı ve programlı yapılan bakım
+                                                                    onarım çalışmaları&nbsp;ile ilgili olarak
+                                                                    aşağıdakilerden hangisi yanlıştır?</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1"
+                                                                            onchange="Save(&#39;1b5e9902-3c54-4054-8b12-95e2531e2327&#39;, &#39;7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">İş
+                                                                            veriminin artması sağlanır.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1"
+                                                                            onchange="Save(&#39;9a6cd940-776a-4062-a970-a3a048118e81&#39;, &#39;7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">Çalışanların
+                                                                            GÜVENİ kazanılmış olur.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1"
+                                                                            onchange="Save(&#39;0e76f822-0106-4548-a2c1-7b52c338a1e1&#39;, &#39;7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">İsraf
+                                                                            artar.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1"
+                                                                            onchange="Save(&#39;b26448c5-d035-4928-ad6a-dd707b3be323&#39;, &#39;7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Malzeme
+                                                                            kayıpları en aza indirilir.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1"
+                                                                            onchange="Save(&#39;62d3bb94-d968-41c6-9e8f-31c580ffad2a&#39;, &#39;7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Her şeyin
+                                                                            en iyi şekilde ve en verimli şekilde
+                                                                            kullanılması sağlanır.</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;7f91b1b6-5699-4230-94f0-ffdf4ef8cbb1&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-wizard-type="step-content">
+
+
+                                            <div class="card card-custom mb-2 TaphxqjG">
+                                                <div class="card-body d-flex align-items-center flex-wrap">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h3 class="font-weight-bolder question-observer question-number"
+                                                                data-q="7a8fb839-fd10-4194-8f63-b5b3fe1da6a0">Soru 10
+                                                            </h3>
+                                                            <div>
+                                                                <span
+                                                                    class="grade label label-inline label-info label-xl">Puan:
+                                                                    10,00</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="text-dark-100 font-size-lg mt-2 jdflkgjlk">
+                                                            <p><strong>Aşağıdakilerden hangisi kişiye yönelik koruma
+                                                                    uygulamasıdır.</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card card-custom gutter-b mb-15 TaphxqjG" style="">
+                                                <div
+                                                    class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="cevap">A</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7a8fb839-fd10-4194-8f63-b5b3fe1da6a0"
+                                                                            onchange="Save(&#39;f0618bb6-aa6e-4ec0-883a-91ff81b0c68c&#39;, &#39;7a8fb839-fd10-4194-8f63-b5b3fe1da6a0&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Genel
+                                                                            aydınlatma</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">B</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7a8fb839-fd10-4194-8f63-b5b3fe1da6a0"
+                                                                            onchange="Save(&#39;14cfbfe9-3d59-4aca-a012-98b009fdc574&#39;, &#39;7a8fb839-fd10-4194-8f63-b5b3fe1da6a0&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Tehlikesiz
+                                                                            olanla değiştirme</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">C</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7a8fb839-fd10-4194-8f63-b5b3fe1da6a0"
+                                                                            onchange="Save(&#39;5939be4c-f812-400c-8bef-2509aa52e73a&#39;, &#39;7a8fb839-fd10-4194-8f63-b5b3fe1da6a0&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">İşe giriş
+                                                                            muayenesi</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">D</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7a8fb839-fd10-4194-8f63-b5b3fe1da6a0"
+                                                                            onchange="Save(&#39;05a11806-aaaf-4b6c-bfce-6ca97a87d4ec&#39;, &#39;7a8fb839-fd10-4194-8f63-b5b3fe1da6a0&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong
+                                                                            class="answer-text jdflkgjlk">Yalıtım</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap">E</td>
+                                                                <td class="cevap-yazi">
+                                                                    <label class="radio align-items-start">
+                                                                        <input type="radio"
+                                                                            name="radio-7a8fb839-fd10-4194-8f63-b5b3fe1da6a0"
+                                                                            onchange="Save(&#39;b5de86cb-1397-4934-b4bd-4e1b296b483f&#39;, &#39;7a8fb839-fd10-4194-8f63-b5b3fe1da6a0&#39;, false);">
+                                                                        <span></span>
+                                                                        <strong class="answer-text jdflkgjlk">Genel
+                                                                            havalandırma</strong>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="cevap"></td>
+                                                                <td class="cevap-yazi">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-danger btn-sm"
+                                                                        onclick="Save(&#39;&#39;, &#39;7a8fb839-fd10-4194-8f63-b5b3fe1da6a0&#39;, true);">Seçimi
+                                                                        Boş Bırakmak İstiyorum</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="d-flex justify-content-between border-top mt-5 p-5 bg-white waterrmark">
+                                            <div class="mr-2">
+                                                <button type="button"
+                                                    class="btn btn-light-primary font-weight-bold  px-9 py-4"
+                                                    data-wizard-type="action-prev">
+                                                    Geri
+                                                </button>
+                                            </div>
+                                            <form action="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review"
+                                                method="post" id="form" class="mr-2">
+                                                <input name="__RequestVerificationToken" type="hidden"
+                                                    value="CfDJ8FirrPdZwRJMqEzy_2IG70_gXe4FLUQQNFxH_pAYvOifG97r89_zaewRkeMWBnhzoW03n_4KPzNbPp-QEERRjuYM3UXrTw2756w2-PCRB59VWck6ttk-ZiHg7ozqd8J-IdGoPy4sR9Gy_qhXuKx7gMR2JMUg_8OLN52ib-s38Kq83xi-S4CpY7H40qqdaJnMIg">
+                                                <input type="hidden" name="s"
+                                                    value="d9925ecd-7f3d-4669-b808-661a8b18c823">
+                                                <button type="submit" class="btn btn-primary px-9 py-4">Cevapları Gözden
+                                                    Geçir</button>
+
+                                            </form>
+                                            <div>
+                                                <button type="button"
+                                                    class="btn btn-primary font-weight-bold  px-9 py-4"
+                                                    data-wizard-type="action-next">
+                                                    İleri
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-custom gutter-b mb-2 waterrmark">
+
+                            </div>
+
+                        </div>
+                        <div style="position: fixed;
+        left: 50%;
+        top: 10px;
+        width: 120px;
+        height: 45px;
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;"
+                            class="countdown bg-primary text-white font-weight-bold font-size-h2 text-center d-none d-md-flex ">
+                            00:00</div>
+                        <div style="position:fixed; top:55px; left:0; width:100%; z-index:9999;"
+                            class="countdown bg-primary text-white font-weight-bold font-size-h2 text-center d-sm-block d-md-none">
+                            00:00</div>
+
+                    </div>
+                </div>
+
+                <!--end::Content-->
+                <!--[html-partial:include:{"file":"partials/_footer.html"}]/-->
+
+                <div class="footer bg-white py-4 d-flex flex-lg-column " id="kt_footer">
+
+                    <!--begin::Container-->
+                    <div
+                        class=" container-fluid  d-flex flex-column flex-md-row align-items-center justify-content-between">
+
+                        <!--begin::Copyright-->
+                        <div class="text-dark order-2 order-md-1">
+                            <span class="text-muted font-weight-bold mr-2">2020©</span>
+                            <a href="https://baum.sakarya.edu.tr/" target="_blank"
+                                class="text-dark-75 text-hover-primary">Bilgisayar Araştırma ve Uygulama Merkezi</a>
+
+                        </div>
+
+                        <!--end::Copyright-->
+                        <!--begin::Nav-->
+                        <div class="nav nav-dark">
+
+                        </div>
+
+                        <!--end::Nav-->
+                    </div>
+
+                    <!--end::Container-->
+                </div>
+
+                <!--end::Footer-->
+            </div>
+
+            <!--end::Wrapper-->
+        </div>
+
+        <!--end::Page-->
+    </div>
+
+    <div id="question_navigation_panel" class="offcanvas offcanvas-right p-10">
+        <!--begin::Header-->
+        <div class="offcanvas-header d-flex align-items-center justify-content-between pb-7">
+            <h4 class="font-weight-bold m-0">Soru Listesi</h4>
+            <a href="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Start#"
+                class="btn btn-xs btn-icon btn-light btn-hover-primary" id="question_navigation_close">
+                <i class="ki ki-close icon-xs text-muted"></i>
+            </a>
+        </div>
+        <div class="offcanvas-content">
+            <div class="d-flex justify-content-between mb-5">
+                <a href="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Start#"
+                    class="btn btn-primary btn-sm btn-upper btn-bold" data-toggle="modal"
+                    data-target="#modal-new-question"><i class="flaticon-plus"></i> Yeni Soru Ekle</a>
+            </div>
+            <!--begin::Wrapper-->
+            <div class="offcanvas-wrapper mb-5 scroll-pull">
+
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Purchase-->
+            <div class="offcanvas-footer">
+            </div>
+            <!--end::Purchase-->
+        </div>
+        <!--end::Content-->
+    </div>
+
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg--><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1"></rect>
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </svg>
+
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <div id="img-preview">
+        <span id="img-preview-close"><i class="fa fa-times"></i></span>
+        <img src="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Start">
+        <small id="img-preview-info">Kapatmak için görüntüye tıklayabilirsiniz</small>
+    </div>
+
+    <!--end::Scrolltop-->
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script type="text/javascript" async=""
+        src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/analytics.js.download"></script>
+    <script type="text/javascript" async="" src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/js"></script>
+    <script>
+        var KTAppSettings = {
+            "breakpoints": {
+                "sm": 576,
+                "md": 768,
+                "lg": 992,
+                "xl": 1200,
+                "xxl": 1200
+            },
+            "colors": {
+                "theme": {
+                    "base": {
+                        "white": "#ffffff",
+                        "primary": "#6993FF",
+                        "secondary": "#E5EAEE",
+                        "success": "#1BC5BD",
+                        "info": "#8950FC",
+                        "warning": "#FFA800",
+                        "danger": "#F64E60",
+                        "light": "#F3F6F9",
+                        "dark": "#212121"
+                    },
+                    "light": {
+                        "white": "#ffffff",
+                        "primary": "#E1E9FF",
+                        "secondary": "#ECF0F3",
+                        "success": "#C9F7F5",
+                        "info": "#EEE5FF",
+                        "warning": "#FFF4DE",
+                        "danger": "#FFE2E5",
+                        "light": "#F3F6F9",
+                        "dark": "#D6D6E0"
+                    },
+                    "inverse": {
+                        "white": "#ffffff",
+                        "primary": "#ffffff",
+                        "secondary": "#212121",
+                        "success": "#ffffff",
+                        "info": "#ffffff",
+                        "warning": "#ffffff",
+                        "danger": "#ffffff",
+                        "light": "#464E5F",
+                        "dark": "#ffffff"
+                    }
+                },
+                "gray": {
+                    "gray-100": "#F3F6F9",
+                    "gray-200": "#ECF0F3",
+                    "gray-300": "#E5EAEE",
+                    "gray-400": "#D6D6E0",
+                    "gray-500": "#B5B5C3",
+                    "gray-600": "#80808F",
+                    "gray-700": "#464E5F",
+                    "gray-800": "#1B283F",
+                    "gray-900": "#212121"
+                }
+            },
+            "font-family": "Poppins"
+        };
+
+        function PageLoadingStart() {
+            KTApp.blockPage({ overlayColor: "#000000", type: "v2", state: "success", message: "Lütfen bekleyin..." });
+        }
+
+        function PageLoadingStop() {
+            KTApp.unblockPage();
+        }
+
+        function PreviewImage(target) {
+            $("#img-preview img").attr('src', $(target).children().first().attr('src'));
+            $("#img-preview").show();
+        }
+
+
+    </script>
+
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/plugins.bundle.js.download"
+        type="text/javascript"></script>
+    <script src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/prismjs.bundle.js.download"></script>
+    <script src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/scripts.bundle.js.download"
+        type="text/javascript"></script>
+
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Vendors(used by this page) -->
+    <script src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/fullcalendar.bundle.js.download"
+        type="text/javascript"></script>
+
+    <!--end::Page Vendors -->
+    <!--begin::Page Scripts(used by this page) -->
+
+    <!--end::Page Scripts -->
+
+
+
+    <script src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/jquery.localScroll.min.js.download"></script>
+
+    <script type="text/javascript">
+        "use strict";
+
+        Array.prototype.remove = function (val) {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] === val) {
+                    this.splice(i, 1);
+                    i--;
+                }
+            }
+            return this;
+        }
+
+        Array.prototype.add = function (val) {
+            var exist = false;
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] === val) {
+                    exist = true;
+                }
+            }
+            if (exist === false) {
+                this.push(val);
+            }
+            return this;
+        }
+
+        var unsavedData = new Array();
+
+        function TextChanged(t) {
+            $(t).addClass('unsaved');
+            unsavedData.add($(t).data('id'));
+        }
+
+        function Save(_c, _d, _e) {
+
+            var cardParent = $("input[name='radio-" + _d + "']").closest(".card");
+
+            KTApp.block($(cardParent), {
+                overlayColor: 'red',
+                opacity: 0.1,
+                state: 'primary',
+                message: 'Cevap Kaydediliyor'
+            });
+
+
+
+            var params = {
+                a: 'd9925ecd-7f3d-4669-b808-661a8b18c823',
+                b: 'bd091a32-5797-4e7d-9b9d-bf0c19d8f080',
+                c: _c,
+                d: _d
+            };
+
+            try {
+                navigator.vibrate(150);
+            } catch (e) {
+
+            }
+
+            $.post('Save', { model: params })
+                .done(function (result) {
+                    if (_e === true) {
+                        $("input[name='radio-" + _d + "']:checked").prop('checked', false);
+                    }
+
+                    KTApp.unblock($(cardParent));
+
+                    if (result.enumResultType === 1) {
+                        toastr.success("Başarıyla keydedildi", "Başarılı");
+
+                        try {
+                            success(result.data.now);
+                        } catch (e) {
+                            console.log(e);
+                        }
+                        setTimeout(CheckExpire, 500);
+
+                        if (_e === true) {
+                            markUnanswered();
+                        } else {
+                            markAnswered();
+                        }
+
+
+                    } else {
+                        $("input[name='radio-" + _d + "']:checked").prop('checked', false);
+                        SaveError(result);
+                    }
+                })
+                .fail(function (x) {
+                    $("input[name='radio-" + _d + "']:checked").prop('checked', false);
+
+                    KTApp.unblock($(cardParent));
+
+                    SaveFail(x.status);
+                });
+        }
+
+        function success(n) {
+            startDate = moment(n, 'DD-MM-YYYY HH:mm:ss');
+
+            var duration = parseInt(moment.duration(endDate.diff(startDate)).asSeconds()) - 1;
+            timer.reset(duration);
+        }
+
+        function SaveError(result) {
+            if (result.data == null) {
+                toastr.error("Kayıt esnasında hata oluştu #SBS101", "Hata");
+            } else if (result.data.enumErrorType === 2) {
+                Swal.fire(
+                    'Dikkat',
+                    'Başka cihazda oturum açıldığı tespit edildi! Oturum listesi sayfasına yönlendiriliyorsunuz.  #SBS102',
+                    'error'
+                ).then((result) => {
+                    window.location.href = '/Session/Exam';
+                });
+            } else if (result.data.enumErrorType === 4 || result.data.enumErrorType === 3) {
+                Swal.fire(
+                    'Dikkat',
+                    'Oturum süresi doldu! Oturum listesi sayfasına yönlendiriliyorsunuz.  #SBS103',
+                    'error'
+                ).then((result) => {
+                    window.location.href = '/Session/Exam';
+                });
+            }
+        }
+
+        function CheckExpire() {
+            if (timer.expired()) {
+                Swal.fire(
+                    'Dikkat',
+                    'Oturum süresi doldu! Oturum listesi sayfasına yönlendiriliyorsunuz.  #SBS105',
+                    'error'
+                ).then((result) => {
+                    window.location.href = '/Session/Exam';
+                });
+            }
+        }
+
+        function SaveFail(status) {
+            if (status === 0 || status === 405) {
+                Swal.fire(
+                    'Dikkat',
+                    'Kayıt gerçekleştirilemedi. İnternet bağlantınızın olduğundan emin olun. Oturum listesi sayfasına yönlendiriliyorsunuz.  #SBS104',
+                    'error'
+                ).then((result) => {
+                    window.location.href = '/Session/Exam';
+                });
+            }
+        }
+
+        function markAnswered() {
+            $('.wizard-step[data-wizard-state="current"] .wizard-label').addClass("answered");
+            $('.wizard-step[data-wizard-state="current"] .wizard-bar').addClass("answered");
+            $('.wizard-step[data-wizard-state="current"] .wizard-label').removeClass("unanswered");
+            $('.wizard-step[data-wizard-state="current"] .wizard-bar').removeClass("unanswered");
+        }
+
+        function markUnanswered() {
+            $('.wizard-step[data-wizard-state="current"] .wizard-label').addClass("unanswered");
+            $('.wizard-step[data-wizard-state="current"] .wizard-bar').addClass("unanswered");
+            $('.wizard-step[data-wizard-state="current"] .wizard-label').removeClass("answered");
+            $('.wizard-step[data-wizard-state="current"] .wizard-bar').removeClass("answered");
+        }
+
+        function SaveText(_d, target) {
+            $(target).prop('disabled', true);
+
+            var params = {
+                a: 'd9925ecd-7f3d-4669-b808-661a8b18c823',
+                b: 'bd091a32-5797-4e7d-9b9d-bf0c19d8f080',
+                d: _d,
+                e: document.getElementById('a-' + _d).value
+            };
+
+            try {
+                navigator.vibrate(150);
+            } catch (e) {
+
+            }
+
+            $.post('Save', { model: params })
+                .done(function (result) {
+                    if (result.enumResultType === 1) {
+                        $('#a-' + _d).removeClass('unsaved');
+                        unsavedData.remove($('#a-' + _d).data('id'));
+
+                        toastr.success("Başarıyla keydedildi", "Başarılı");
+
+                        try {
+                            success(result.data.now);
+                        } catch (e) {
+                            console.log(e);
+                        }
+                        setTimeout(CheckExpire, 500);
+
+                        markAnswered();
+                    } else {
+                        SaveError(result);
+                    }
+                })
+                .fail(function (x) {
+                    SaveFail(x.status);
+                })
+                .always(function () {
+                    $(target).prop('disabled', false);
+                });
+        }
+
+        function CountDownTimer(duration, granularity) {
+            this.duration = duration;
+            this.granularity = granularity || 1000;
+            this.tickFtns = [];
+            this.running = false;
+            this.startDate = Date.now();
+        }
+
+        CountDownTimer.prototype.start = function () {
+            if (this.running) {
+                return;
+            }
+            this.running = true;
+            var that = this,
+                diff, obj;
+
+            (function timer() {
+
+                diff = that.duration - (((Date.now() - that.startDate) / 1000) | 0);
+
+                if (diff > 0) {
+                    setTimeout(timer, that.granularity);
+                } else {
+                    diff = 0;
+                    that.running = false;
+                }
+
+                obj = CountDownTimer.parse(diff);
+
+                that.tickFtns.forEach(function (ftn) {
+                    ftn.call(this, obj.minutes, obj.seconds);
+                }, that);
+            }());
+        };
+
+        CountDownTimer.prototype.onTick = function (ftn) {
+            if (typeof ftn === 'function') {
+                this.tickFtns.push(ftn);
+            }
+            return this;
+        };
+
+        CountDownTimer.prototype.expired = function () {
+            return !this.running;
+        };
+
+        CountDownTimer.prototype.reset = function (duration) {
+            this.running = false;
+            this.startDate = Date.now();
+            this.duration = duration - 1;
+            this.running = true;
+        };
+
+        CountDownTimer.parse = function (seconds) {
+            return {
+                'minutes': (seconds / 60) | 0,
+                'seconds': (seconds % 60) | 0
+            };
+        };
+
+        function timerTick(minutes, seconds) {
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            $('.countdown').text(minutes + ':' + seconds);
+        }
+
+        function timerCheckExpire(minutes, seconds) {
+            if ((minutes == 5 || minutes == 2 || minutes == 1) && seconds == 0) {
+                toastr.warning(minutes + " dakikanız kaldı", "Dikkat", { timeOut: 10000 });
+            }
+        }
+
+        function Seen(_q) {
+            try {
+                $.post('Seen', { q: _q });
+            } catch (e) {
+
+            }
+        }
+
+        function CheckUnsaved() {
+            if (unsavedData.length > 0) {
+                unsavedData.forEach(function (item) {
+                    $('#oe-' + item).click();
+                });
+            }
+        }
+
+        var timer;
+        var endDateStr = '29-04-2024 22:25:18';
+        var startDateStr = '29-04-2024 22:05:18';
+        var endDate, startDate;
+
+        $(document).ready(function () {
+            $('#form').on('submit', function () {
+                var $this = $(this);
+
+                if (unsavedData.length > 0) {
+                    Swal.fire({
+                        title: 'Dikkat',
+                        text: "Kaydedilmemiş cevap var. Açık uçlu soruların altındaki kaydet butonuna tıkladığınıza emin olun. Devam etmek istediğinize emin misiniz?",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Evet',
+                        cancelButtonText: 'Hayır'
+                    }).then((result) => {
+                        if (result.value) {
+                            Swal.fire({
+                                title: 'Dikkat',
+                                text: "Cevapları gözden geçirip eğer süreniz var ise bu sınava geri dönebilirsiniz",
+                                icon: 'warning',
+                                showCancelButton: true,
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: 'Cevapları Gözden Geçir',
+                                cancelButtonText: 'İptal'
+                            }).then((result) => {
+                                if (result.value) {
+                                    $this.off('submit').submit();
+                                }
+                            });
+                        }
+
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Dikkat',
+                        text: "Cevapları gözden geçirip eğer süreniz var ise bu sınava geri dönebilirsiniz",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Cevapları Gözden Geçir',
+                        cancelButtonText: 'İptal'
+                    }).then((result) => {
+                        if (result.value) {
+                            $this.off('submit').submit();
+                        }
+
+                    });
+                }
+
+
+
+                return false;
+            });
+
+            $("body").on("contextmenu", function (e) {
+                return false;
+            });
+
+            $('body').bind('cut copy paste', function (e) {
+                e.preventDefault();
+            });
+
+            try {
+                document.addEventListener('keydown', function (e) {
+                    if (!e.target.classList.contains('openend')) {
+                        if (e.which === 37 || e.which === 38 || e.which === 39 || e.which === 40 || e.which === 32 || e.which === 9) {
+                            e.preventDefault();
+                        }
+                    }
+                });
+            } catch (e) {
+
+            }
+
+            var duration = 1199;
+
+            endDate = moment(endDateStr, 'DD-MM-YYYY HH:mm:ss');
+            startDate = moment(startDateStr, 'DD-MM-YYYY HH:mm:ss');
+
+            duration = parseInt(moment.duration(endDate.diff(startDate)).asSeconds());
+
+            timer = new CountDownTimer(duration);
+            timer.onTick(timerTick).onTick(timerCheckExpire).start();
+
+            setInterval(function () {
+                try {
+                    CheckUnsaved();
+                } catch (e) {
+
+                }
+            }, 15000);
+
+            $('#dlgksdlkjfsd').remove();
+
+            /*
+            $('#fullscreen-prompt').show();
+
+            var element = document.querySelector("#kt_body");
+
+            element.addEventListener('fullscreenchange', function () {
+                if (document.fullscreenElement !== null)
+                    console.log('Element has entered fullscreen mode');
+                else
+                    console.log('Element has exited fullscreen mode');
+                });
+
+
+            document.addEventListener('', function () {
+                var full_screen_element = document.fullscreenElement;
+
+                if (full_screen_element !== null) {
+                    console.log('Page has entered fullscreen mode');
+                }
+                else {
+                    console.log('Page has exited fullscreen mode');
+                }
+            });
+            */
+
+
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        Seen($(entry.target).data('q'));
+                        //observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 1 });
+
+            document.querySelectorAll('.question-observer').forEach(p => { observer.observe(p) });
+
+
+        });
+
+        var KTWizard3 = function () {
+            var _wizardEl;
+            var _wizard;
+
+            var initWizard = function () {
+                _wizard = new KTWizard(_wizardEl, {
+                    startStep: 1,
+                    clickableSteps: true
+                });
+
+                _wizard.on('change', function (wizard) {
+                    //KTUtil.scrollTop();
+                    try {
+                        KTUtil.scrollTo($('#scrollTarget')[0], 0, 100);
+                    } catch (e) {
+
+                    }
+                });
+            }
+
+            return {
+                init: function () {
+                    _wizardEl = KTUtil.getById('kt_wizard_v3');
+                    initWizard();
+                }
+            };
+        }();
+
+        jQuery(document).ready(function () {
+            KTWizard3.init();
+
+            window.onbeforeprint = function () {
+                $('div').hide();
+            };
+        });
+
+
+        function goFullscreen() {
+            var elem = document.querySelector("#kt_body");
+
+            $('#fullscreen-prompt').hide();
+            $('#kt_content').css("background-color", "#EEF0F8");
+
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#img-preview").click(function () {
+                $(this).hide();
+            });
+        });
+
+        $(document).ajaxError(function (e, x) {
+            toastr.error("Beklenmedik bir hata oluştu.<br/>İnternet bağlantınızın olduğundan emin olun.<br/>Sayfayı yenilemeyi deneyin veya daha sonra tekrar deneyin.", "Hata", { timeOut: 10000 });
+        });
+
+        $(document).ajaxSuccess(function (e, x) {
+            if (x.responseJSON !== undefined && x.responseJSON.autoHandle) {
+                handleToast(x.responseJSON);
+            }
+        });
+
+        function handleToast(toast) {
+            var txt = '';
+            if (toast.messageList != null) {
+                txt = toast.messageList.join('<br/>');
+            }
+
+            switch (toast.enumResultType) {
+                case 1:
+                    toastr.success(txt, "Başarılı", { timeOut: toast.duration });
+                    break;
+                case 2:
+                    toastr.error(txt, "Hata", { timeOut: toast.duration });
+                    break;
+                case 3:
+                    toastr.info(txt, "Bilgi", { timeOut: toast.duration });
+                    break;
+                case 4:
+                    toastr.warning(txt, "Uyarı", { timeOut: toast.duration });
+                    break;
+                default:
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        window.console.log = function () {
+            console.error('Burada yapmaya çalıştığınız işlemler kaydedilmektedir. Sınavınız iptal edilebilir.');
+            window.console.log = function () {
+                return false;
+            }
+        }
+
+        $(document).ready(function () {
+            $(document).keydown(function (event) {
+                if (event.keyCode == 123) {
+                    return false;
+                } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                    return false;
+                }
+            });
+        });        
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./SABİS _ Sakarya Üniversitesi Bilgi Sistemi_files/js(1)"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-29424182-21');
+    </script>
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+        style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+        <defs id="SvgjsDefs1002"></defs>
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+</body>
+
+</html>
