@@ -1,0 +1,51 @@
+Components
+- StyleSheet						--> StyleSheet.create()
+- Text
+- View
+- Dimensions						--> Dimensions.get('window')
+- Image							--> fadeDuration, source
+- SafeAreaView
+- TouchableOpacity					--> numberOfLines, adjustsFontSizeToFit
+- TextInput						--> keyboardType, secureTextEntry, autoFocus, placeholder, placeholderTextColor
+- Switch						--> trackColor, thumbColor, onValueChange, value, transform
+- Platform						--> Platform.OS
+- TouchableHighlight					--> underlayColor, onPress
+- Modal							--> animationType, transparent, visible
+- useRef
+- useEffect
+- FlatList
+- ActivityIndicator
+
+import React, { useState } from "react";
+
+import { StatusBar } from "expo-status-bar";
+import { FontAwesome5 } from "@expo/vector-icons";	--> <FontAwesome5/>
+import Constants from "expo-constants";			--> Constants.statusBarHeight
+
+export default React.memo(Button);
+
+Component Style Properties
+- flex
+- flexDirection
+- alignItems
+- justifyContent
+
+- color
+- backgroundColor
+- width
+- height
+- padding
+- margin
+- position
+- zIndex
+- borderRadius
+- resizeMode
+
+- fontSize
+- fontStyle
+- fontWeight
+- textTransform
+- textDecorationLine
+- lineHeight
+- textAlign
+- textAlignVertical
