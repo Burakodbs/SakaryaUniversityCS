@@ -1,5 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-git lfs track "*.pdf"
-git lfs track "*.mp4"
-git lfs track "*.rar"
+
+# Git LFS tracking (if using Git LFS)
+# *.pdf filter=lfs diff=lfs merge=lfs -text
+# *.mp4 filter=lfs diff=lfs merge=lfs -text
+# *.rar filter=lfs diff=lfs merge=lfs -text
