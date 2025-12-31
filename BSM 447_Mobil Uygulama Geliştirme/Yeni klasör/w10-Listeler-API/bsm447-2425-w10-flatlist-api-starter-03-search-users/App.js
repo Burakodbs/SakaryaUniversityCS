@@ -16,18 +16,9 @@ import {
 const USER_COUNT = 1000; 
 
 export default function App() {
-  // ---------------------------------------------------------
-  // 1. STATE TANIMLARI (BURAYI BİRLİKTE DOLDURACAĞIZ)
-  // ---------------------------------------------------------
-  // TODO: Loading state'i tanımla
-  // TODO: Veri state'lerini tanımla (Master ve Filtered)
-    // ikinci adım.
-//  const [users, setUsers] = useState([]);
-  
-  // 3. adım
-const [masterData, setMasterData] = useState([]);   // Yedek (Orijinal)
-const [filteredData, setFilteredData] = useState([]); // Ekranda görünen
 
+  const [masterData, setMasterData] = useState([]);   // Yedek (Orijinal)
+  const [filteredData, setFilteredData] = useState([]); // Ekranda görünen
   const [loading, setLoading] = useState(true);
   
 
@@ -65,16 +56,12 @@ const [filteredData, setFilteredData] = useState([]); // Ekranda görünen
   };
 
   const searchFilterFunction = (text) => {
-    // TODO: Arama mantığını buraya kuracağız
-      // 3. adım
       if (text) {
           // 1. Orijinal veriden (masterData) filtrele
           const newData = masterData.filter(item => {
-            
             // İsimleri BÜYÜK HARFE çevir ki 'ahmet' ile 'AHMET' eşleşsin
             const itemData = `${item.name.first} ${item.name.last}`.toUpperCase();
             const textData = text.toUpperCase();
-
             // indexOf > -1 ise aranan metin ismin içinde var demektir
             return itemData.indexOf(textData) > -1;
           });
@@ -140,9 +127,8 @@ const [filteredData, setFilteredData] = useState([]); // Ekranda görünen
       {/* LİSTE ALANI */}
       <View style={styles.listContainer}>
         {/* TODO: FlatList bileşenini buraya yazacağız */}
-
+        
         <FlatList
-            //data={users}
             data={filteredData}
             keyExtractor={(item) => item.login.uuid}
             renderItem={renderItem}

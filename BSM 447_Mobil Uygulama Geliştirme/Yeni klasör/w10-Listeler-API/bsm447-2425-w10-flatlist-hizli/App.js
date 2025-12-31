@@ -5,7 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 // 5000 elemanlı sahte bir dizi oluşturuyoruz
 // Öğrencilere bu kısa yolu öğretin, çok severler:
-const DATA = Array.from({ length: 5000 }, (_, i) => `Dizi Elamanı ${i + 1}`);
+const DATA = Array.from({ length: 5000 }, (_, i) => `Dizi Elemanı ${i + 1}`);
 
 // ... importlar ve DATA aynı ...
 
