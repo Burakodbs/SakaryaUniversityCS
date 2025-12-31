@@ -1,2 +1,155 @@
-/Yeni klasör
-BSM 447_Mobil Uygulama Geliştirme/w05/node_modules/
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Windows
+*.lnk
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+.netrwhist
+.vim/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.sln.docstates
+*.user
+*.sln
+*.suo
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+ipch/
+*.ipch
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.lib
+
+# NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+target/
+.classpath
+.project
+.settings/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+.coverage
+.pytest_cache/
+*.cover
+.hypothesis/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# React Native / Expo (Mobile Development)
+.expo/
+.expo-shared/
+web-build/
+
+# C#/.NET
+bin/
+obj/
+*.dll
+*.pdb
+.csproj.user
+.vbproj.user
+
+# Gradle
+.gradle/
+local.properties
+
+# Android
+.gradle
+.idea
+local.properties
+*.iml
+*.apk
+*.ap_
+*.dex
+*.class
+
+# Backup and temporary files
+*.bak
+*.backup
+*.swp
+*.tmp
+*.temp
+*.orig
+*~
+*.log
+*.out
+*.cache
+
+# Directories to ignore
+/Yeni klasör/
+.cache/
+.temp/
+tmp/
